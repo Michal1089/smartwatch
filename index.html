@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartwatch</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="watch-strap"></div>
+<div class="watch-frame" id="watchFrame">
+    <button id="changeWallpaper" onclick="wallpapers()">&#x1F3A8;</button>
+    <button id="themeSwitcher" onclick="darkLightMode()">&#x1F319;</button>
+    <button id="modeSwitcher" onclick="toggleClockMode()">&#x23F1;&#xFE0F;</button>
+
+    <div class="watch-inner">
+        <div class="top-info">
+            <p id="battery"></p>
+            <p id="date"></p>
+        </div>
+
+        <p id="timer"></p>
+        <canvas id="analogClock" width="200" height="200"></canvas>
+
+        <div class="widget">
+            <p class="widget-title">Pogoda</p>
+            <p id="weather"></p>
+        </div>
+
+        <div class="widget">
+            <p class="widget-title">Aktywność</p>
+            <p id="steps"></p>
+        </div>
+
+        <div class="widget">
+            <p class="widget-title">Powiadomienia</p>
+            <ul id="notifications" style="padding-left: 15px; margin: 0; max-height: 100px; overflow-y: auto; list-style: none;"></ul>
+        </div>
+
+        <div class="widget">
+            <p class="widget-title">Tętno</p>
+            <p id="heartRate">&#x2764;&#xFE0F; -- bpm</p>
+        </div>
+
+        <div class="widget">
+            <p class="widget-title">Saturacja</p>
+            <p id="oxygenLevel">&#x1FA78; -- %</p>
+        </div>
+
+        <div class="widget">
+            <p class="widget-title">Ciśnienie</p>
+            <p id="bloodPressure">&#x2764;&#xFE0F; --/-- mmHg</p>
+        </div>
+
+        <div class="widget">
+            <p class="widget-title">Stres</p>
+            <p id="stressLevel">&#x1F60C; --%</p>
+        </div>
+
+        <div class="widget">
+            <p class="widget-title">Muzyka</p>
+            <p id="audioLabel">&#x1F3B5; Mozart – Symphony No. 40</p>
+            <div class="stopwatch-controls">
+                <button id="playIcon" class="control-btn">&#x25B6;&#xFE0F;</button>
+            </div>
+            <audio id="myAudio" src="audio/mozart.mp3"></audio>
+        </div>
+
+        <div class="widget">
+            <p class="widget-title">Stoper</p>
+            <p id="stopwatch">00:00:00</p>
+            <div class="stopwatch-controls">
+                <button id="stopwatchIcon" class="control-btn">&#x25B6;&#xFE0F;</button>
+                <div id="stopwatchReset" class="control-btn" style="font-size:12px;">R</div>
+            </div>
+        </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
