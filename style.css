@@ -255,3 +255,101 @@ html {
     transform: scale(1.1);
     background: rgba(255,255,255,0.12);
 }
+
+@media (max-width: 600px) {
+    .watch-strap {
+        height: 500px;
+        width: 100px;
+        top: 4%;
+        left: 42vw;
+        padding: 15px 0;
+    }
+
+    .watch-strap::before {
+        width: 8px;
+        height: 8px;
+        box-shadow: 
+            0 20px #333, 
+            0 40px #333, 
+            0 60px #333, 
+            0 80px #333, 
+            0 100px #333, 
+            0 120px #333;
+    }
+
+    .watch-frame {
+        width: 250px;
+        height: 250px;
+        border-width: 6px;
+    }
+
+    .watch-inner {
+        width: 200px;
+        height: 200px;
+        padding: 15px;
+    }
+
+    #timer {
+        font-size: 40px;
+        margin-top: 20px;
+    }
+
+    #stopwatch {
+        font-size: 22px;
+    }
+
+    .stopwatch-controls {
+        gap: 10px;
+    }
+
+    .control-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 16px;
+    }
+
+    #audioLabel {
+        font-size: 12px;
+    }
+
+    #map {
+        height: 100px;
+        margin-top: 8px;
+    }
+
+    #changeWallpaper {
+        left: 30px;
+        margin-left: 0;
+        padding: 5px 6px;
+        font-size: 14px;
+    }
+
+    #themeSwitcher {
+        right: 80px;
+        padding: 4px 5px;
+        font-size: 14px;
+    }
+
+    #modeSwitcher {
+        right: 150px;
+        padding: 4px 5px;
+        font-size: 14px;
+    }
+
+    #steps {
+        font-size: 14px;
+    }
+
+    .widget {
+        padding: 8px;
+    }
+
+    .widget-title {
+        font-size: 12px;
+    }
+
+    .calc-btn {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
